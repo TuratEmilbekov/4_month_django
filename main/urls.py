@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from shop_backend import views
+from users import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +24,7 @@ urlpatterns = [
     path('api/v1/products/<int:id>/', views.product_detail_view),
     path('api/v1/products/review/', views.get_review),
     path('api/v1/products/tags/', views.get_tags),
+    path('api/v1/login/', user_views.login),
+    path('api/v1/register/', user_views.register),
+    # path('api/v1/post/', user_views.LoginAPIView.as_view(),
 ]
