@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'shop_backend',
     'users',
+    'rest_framework.authtoken'
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES':[

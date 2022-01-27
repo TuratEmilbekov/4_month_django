@@ -9,6 +9,13 @@ class TagSerializer(serializers.ModelSerializer):
         model = Tag
         fields = '__all__'
 
+
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Products
+        fields = '__all__'
+
+        
 class ProductListSerializer(serializers.ModelSerializer):
     reviews = ''
     class Meta:
@@ -16,7 +23,7 @@ class ProductListSerializer(serializers.ModelSerializer):
         # fields = '__all__'
         fields = ['id', 'title', 'tags', 'reviews']
 
-class ReviewListSerializer(serializers.ModelSerializer):
+class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
         fields = '__all__'
